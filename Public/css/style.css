@@ -1,0 +1,18 @@
+.carousel-inner img{ /*needs adjusting in smaller screen */
+height: 500px;
+}
+
+iframe{ /*needs adjusting in smaller screen */
+    height:410px;
+    width:480px;
+}
+@media screen and (max-width:1000px){
+    iframe{ 
+        height:200px;
+        width:300px;
+    }    
+    .carousel-inner img{ 
+        height: auto;
+        }
+
+}
