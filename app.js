@@ -5,6 +5,9 @@ const path=require("path");
 var app=express();
 var AnimeInfo = require('./model/anime');
 var videopageRoute = require('./routes/vidpage')
+var mainpageRoute = require('./routes/mainpage')
+var episodepageRoute = require('./routes/episodepage')
+var animepageRoute = require('./routes/animepage')
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 const api = require('gogoanime')
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -21,14 +24,22 @@ mongoose.connection.once('open', function(){
 }).on('error', function(error){
     comsole.log('error faced:', error)
 }) 
-app.get('/', function(req,res){
-    res.render('index')
-})
+app.use('/', urlencodedParser,mainpageRoute)
 app.use('/movie',urlencodedParser,videopageRoute)
-api.search('initial d legend ').then(function(result){
+app.use('/episodepage',urlencodedParser,episodepageRoute)
+app.use('/animepage',urlencodedParser,animepageRoute)
+
+/*
+api.popular(1).then(function(result){
     const lol = result
     console.log(lol)
-})
+}) 
+api.search('stone wars').then(function(result){
+    console.log(result[1])
+}) 
+api.animeEpisodeHandler('actors-songs-connection-episode-9').then(function(result){
+    console.log(result)
+})*/
 
 
 app.listen("3000", function(req,res){

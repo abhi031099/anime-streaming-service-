@@ -95,6 +95,18 @@
         </div>
       </div>
     </div>
+    <div class="row d-flex justify-content-center">
+      <% data.forEach(function(anime){ %>
+      <div class="card my-2 mx-2 border-0" style="width: 18rem;">
+        <img class="card-img" src="<%= anime.img %>" alt="Card image cap">
+        <div class="card-img-overlay">
+          <a href="/animepage/<%=anime.title %>" class="btn btn-primary"><%=anime.title %></a>
+        </div>
+        
+      </div>
+      <% }); %>
+    </div>
+    <h5><%= data %></h5>
   </div>
   <footer class="bg-light text-center text-lg-start">
     <!-- Copyright -->
