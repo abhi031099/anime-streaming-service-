@@ -46,4 +46,4 @@ app.listen("3000", function(req,res){
     console.log("server running bois")
 }) 
 */
-app.listen(process.env.PORT || 5000)
+app.listen(process.env.PORT || 3000)
