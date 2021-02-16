@@ -39,9 +39,11 @@ api.search('stone wars').then(function(result){
 }) 
 api.animeEpisodeHandler('actors-songs-connection-episode-9').then(function(result){
     console.log(result)
-}) */
+}) 
 
 
 app.listen("3000", function(req,res){
     console.log("server running bois")
 }) 
+*/
+app.listen(process.env.PORT || 5000)
