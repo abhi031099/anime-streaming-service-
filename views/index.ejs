@@ -9,108 +9,65 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="/css/style.css">
-  <title>testing?</title>
+  <title>WatchAnimeNow</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg  bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">
-        <img src="images/logo.jpg" alt="logoo" width="30" height="24" class="d-inline-block align-top">
-        INITIAL D
-      </a>
+      <a class="navbar-brand " href="/">Sugoi Anime</a>
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/animelist/0">Anime List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Help</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
-  <div class="container my-2">
-    <!--CAROUSEL-->
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active ">
-          <img src="images/movie1.jpg" class="img-fluid d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item ">
-          <img src="images/movie2.jpg" class="img-fluid d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item ">
-          <img src="images/movie3.jpg" class="img-fluid d-block w-100" alt="...">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+  <div class="container py-2 mainpagecontainer">
+    <!--Cover Image-->
+    <section id="coverimage">
+      <img src="/images/coverimage.jpg">
+    </section>
+    <!--ALERT-->
+    <div class="alert alert-success my-1 py-1" role="alert">
+      Welcome to my WebApp, i hope you like it! If you find any bugs or something, head to the "Help" page. 
     </div>
-
-    <!--MID IFRAME AND STUFF-->
-    <div class="row my-2">
-      <div class="col-sm-6 my-2">
-        <div class="card bg-dark text-white">
-          <img class="card-img" src="images/midele.png" alt="Card image">
-          <div class="card-img-overlay">
-            <h4 class="card-title">HELLO MY BROTHAS</h4>
-            <p class="card-text">This is just me trying to learn, so don't mind me!</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 d-flex justify-content-center my-2">
-        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/V-qMVrCAhxQ" title="Iframe" frameborder="0"
-          allowfullscreen></iframe>
-      </div>
-    </div>
-    <!--THUMBNAIL AND STUFF-->
+    <!--SEARCH BAR-->
     <section class="d-flex justify-content-center">
       <form class="searchbar">
-        <div class="input-group mb-3">
-          <input type="text" id="searchbox" class="form-control" placeholder="Search(Make sure to check the spellings or you might not get any results!)" aria-label="Recipient's username" aria-describedby="button-addon2">
-          <button class="btn btn-outline-secondary" type="submit" id="button-addon2" >Search</button>
+        <div class="input-group my-3">
+          <input type="text" id="searchbox" class="form-control"
+            placeholder="Search"
+            aria-label="Recipient's username" aria-describedby="button-addon2">
+          <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
         </div>
+        <span class="form-text text-white my-1"> Make sure to check the spellings or you might not get any results!(also don't use symbols like '/')</span>
       </form>
-      
     </section>
-    <div class="row d-flex justify-content-center">
-      <div class="card my-2 mx-2 border-0" style="width: 18rem;">
-        <img class="card-img" src="images/yhumb1.jpg" alt="Card image cap">
-        <div class="card-img-overlay">
-        </div>
-      </div>
-      <div class="card my-2 mx-2 border-0" style="width: 18rem;">
-        <img class="card-img" src="images/thumb2.jpg" alt="Card image cap">
-        <div class="card-img-overlay">
-        </div>
-      </div>
-      <div class="card my-2 mx-2 border-0" style="width: 18rem;">
-        <img class="card-img" src="images/thumb3.jpg" alt="Card image cap">
-        <div class="card-img-overlay">
-        </div>
-      </div>
-    </div>
-    <div class="row d-flex justify-content-center">
+    <!--CARDS-->
+    <div class="row d-flex justify-content-center my-5 ">
+      <h3 class="cardheading text-center">TOP ANIMES</h3>
       <% data.forEach(function(anime){ %>
-      <div class="card my-2 mx-2 border-0" style="width: 18rem;">
-        <img class="card-img" src="<%= anime.img %>" alt="Card image cap">
-        <div class="card-img-overlay">
-          <a href="/animepage/<%=anime.title %>" class="btn btn-primary"><%=anime.title %></a>
+        <div class="card " style="width: 12rem;">
+          <img class="card-img-top" src="<%= anime.img %>" alt="Card image cap">
+          <div class="card-body text-center">
+            <a href="/animepage/<%=anime.title %>" class="stretched-link"><%=anime.title %></a>
+          </div>
         </div>
-        
-      </div>
       <% }); %>
     </div>
-    <h5><%= data %></h5>
   </div>
   <footer class="bg-light text-center text-lg-start">
     <!-- Copyright -->
@@ -130,7 +87,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
   </script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+    integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
   <script src="/js/anime.js"></script>
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--
