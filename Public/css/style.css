@@ -1,4 +1,6 @@
-
+.alphabets li{
+    display: inline;
+}
 
 
 .carousel-inner img{ /*needs adjusting in smaller screen */

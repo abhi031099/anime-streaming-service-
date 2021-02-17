@@ -35,12 +35,12 @@
     <% } %>
     <div class="container">
       <div class="row d-flex justify-content-center">
-        <% data.forEach(function(anime){ %>
+        <% data.forEach(function(animeobj){ %>
         <div class="card my-2 mx-2 border-0" style="width: 18rem;">
-          <img class="card-img" src="<%= anime.img %>" alt="Card image cap">
+          <img class="card-img" src="<%= animeobj.img %>" alt="Card image cap">
           <div class="card-img-overlay">
-            <p><%= anime %></p>
-            <a class="btn btn-primary"  ><%=anime.title %> episode <%=anime.totalEpisodes %></a> 
+            <p><%= animeobj %></p>
+            <a class="btn btn-primary"  ><%=animeobj.title %> episode <%=animeobj.totalEpisodes %></a> 
           </div>
           
         </div>

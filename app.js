@@ -8,6 +8,7 @@ var videopageRoute = require('./routes/vidpage')
 var mainpageRoute = require('./routes/mainpage')
 var episodepageRoute = require('./routes/episodepage')
 var animepageRoute = require('./routes/animepage')
+var animelistRoute = require('./routes/animelist')
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 const api = require('gogoanime')
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -24,20 +25,21 @@ mongoose.connection.once('open', function(){
 }).on('error', function(error){
     comsole.log('error faced:', error)
 }) 
-app.use('/', urlencodedParser,mainpageRoute)
-app.use('/movie',urlencodedParser,videopageRoute)
-app.use('/episodepage',urlencodedParser,episodepageRoute)
-app.use('/animepage',urlencodedParser,animepageRoute)
+app.use('/',mainpageRoute)
+app.use('/movie',videopageRoute)
+app.use('/episodepage',episodepageRoute)
+app.use('/animepage',animepageRoute)
+app.use('/animelist', animelistRoute)
 
 /*
 api.popular(1).then(function(result){
     const lol = result
     console.log(lol)
+})  
+api.search('my hero').then(function(result){
+    console.log(result[0].episodes[0].id)
 }) 
-api.search('stone wars').then(function(result){
-    console.log(result[1])
-}) 
-api.animeEpisodeHandler('actors-songs-connection-episode-9').then(function(result){
+api.search().then(function(result){
     console.log(result)
 }) 
 
