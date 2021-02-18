@@ -8,9 +8,9 @@ const api = require('gogoanime')
 router.get('/:title', urlencodedParser, function (req, res) {
     var titlee = req.params.title
     api.search(titlee).then(function (result) {
-        res.render('animepage', {
-            data: result
-        })
+            res.render('animepage', {
+                data: result
+            })
     })
 })
 module.exports = router;

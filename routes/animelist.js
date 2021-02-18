@@ -40,7 +40,6 @@ router.get('/:alphabet', urlencodedParser,function(req, res){
 router.get('/:alphabet/:pageno', urlencodedParser,function(req, res){
     var alpha = req.params.alphabet
     var no = req.params.pageno
-    console.log(no)
     api.alphabetList(alpha,no).then(function(result){
         let animelist= []
         result.forEach(function(anime){
