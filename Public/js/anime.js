@@ -20,9 +20,3 @@ function searchPage(){
     
 }
 
-function redirectPage(name){
-    newName = name.replace('//', ' ').replace('?' , ' ').replace('Ⅲ',' ')
-    console.log(newName)
-    window.location.href = '/animepage/'+ newName
-
-}

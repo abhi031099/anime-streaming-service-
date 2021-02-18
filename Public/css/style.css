@@ -3,7 +3,7 @@ body{
     font-family: "Potta One", cursive;
 }
 /* Container colors */
-.mainpagecontainer , .animelist-body{
+.mainpagecontainer , .animelist-body, .errorpage{
     background-color: #212529;
 }
 /* Navbar custom*/
@@ -101,7 +101,16 @@ li#anime-listgroup a{
 li#anime-listgroup a:hover{
     color: #00ff00;
 }
+/*ERROR PAGE CONTENT*/
+a{
+    color: #00ff00;
+    text-decoration: none;
+}
+a:hover {
+    color:#009900;
+    text-decoration: none;
 
+}
 @media screen and (max-width:700px){
     .card-img-top{
         height:auto;

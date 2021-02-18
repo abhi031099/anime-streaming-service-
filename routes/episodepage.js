@@ -10,7 +10,7 @@ var editedLink = titlee.slice(0, -1)
    api.animeEpisodeHandler(titlee).then(function(result){
       // console.log(result)
        res.render('episodepage', {data:result, links:editedLink})
-   })
+   }).catch(err)
 
 })
 module.exports=router;
