@@ -16,6 +16,7 @@
 </head>
 
 <body>
+  <!--NAVBAR-->
   <nav class="navbar navbar-expand-lg  bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand " href="/">Sugoi Anime</a>
@@ -45,7 +46,7 @@
       Welcome to my WebApp, i hope you like it! If you find any bugs or something, head to the "Help" page. 
     </div>
     <!--SEARCH BAR-->
-    <section class="d-flex justify-content-center">
+    <section class="d-flex justify-content-center" name="top">
       <form class="searchbar">
         <div class="input-group my-3">
           <input type="text" id="searchbox" class="form-control"
@@ -68,15 +69,23 @@
         </div>
       <% }); %>
     </div>
+    <!-- FOOTER -->
+    <footer class="bg-dark  ">   
+      <div class="row">
+        <section class="col footer-text">
+          <div class="text-end p-3">
+            <a  href="#">Help!</a>
+          </div>
+        </section>
+        <section class="col footer-icon">
+          <a href="#top">
+          <img src="/images/footerarrow.png"  class=" rounded-circle float-end my-1">
+        </a>
+        </section>
+      </div>
+    </footer>
   </div>
-  <footer class="bg-light text-center text-lg-start">
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      © 2020 Copyright:
-      <a class="text-dark" href="https://github.com/abhi031099">Abhishek Sharma ;)</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
+
 
 
 

@@ -3,7 +3,7 @@ body{
     font-family: "Potta One", cursive;
 }
 /* Container colors */
-.mainpagecontainer{
+.mainpagecontainer , .animelist-body{
     background-color: #212529;
 }
 /* Navbar custom*/
@@ -47,10 +47,59 @@ nav a.nav-link{
     color: white;
     text-decoration: none;
 }
+/*FOOTER STYLING */
+footer section.footer-icon img{
+   background-color: #00ff00;
+}
+footer{
+    border-top: 4px inset;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+footer a:link ,footer a:visited , footer a:hover{
+    font-size: medium;
+    color: #939393;
+    text-decoration: none;
+}
 
-
+/* ANIME LIST PAGE STYLING*/
+/* ALPHABETS SECTION  */
+.alphabet-list{
+    display: flex;
+    justify-content: space-evenly; 
+} 
 .alphabets li{
     display: inline;
+} 
+.alphabets a{
+ text-decoration: none;
+ color: white;
+}
+.alphabets a:hover{
+    text-decoration: none;
+    color: #00ff00;
+   }
+ul.alphabets{
+    border: 1px solid white;
+    padding-left: 0;
+}
+.alphabets h3{
+    background-color: #00ff00;
+}
+.animelist-alert{
+    font-size: small;
+}
+/*Anime list section*/
+.anime-list li#anime-listgroup{
+    background-color: #212529;
+}
+li#anime-listgroup a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+li#anime-listgroup a:hover{
+    color: #00ff00;
 }
 
 @media screen and (max-width:700px){

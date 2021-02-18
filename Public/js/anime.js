@@ -12,5 +12,17 @@ function searchPage(){
     var urlName = '/animelist/'
     var alphaName = pathName.replace(urlName,'')
     var myelement = alphaName.slice(0,1)
-   window.location.href =urlName + myelement + '/'+ pageNo 
+    if(pageNo.length >= 3 || pageNo>63){
+        alert('Seriously? ')
+    } else{
+        window.location.href =urlName + myelement + '/'+ pageNo
+    }
+    
+}
+
+function redirectPage(name){
+    newName = name.replace('//', ' ').replace('?' , ' ').replace('Ⅲ',' ')
+    console.log(newName)
+    window.location.href = '/animepage/'+ newName
+
 }
