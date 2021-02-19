@@ -11,7 +11,7 @@
     <link type="text/css" rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
-    <title><%=title%></title>
+    <title><%=title%> Episode <%=episode%></title>
   </head>
   <body>
     <!--NAVBAR-->
@@ -28,7 +28,7 @@
                       <a class="nav-link" aria-current="page" href="/animelist/0">Anime List</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Help</a>
+                      <a class="nav-link" href="/help">Help</a>
                   </li>
               </ul>
           </div>
@@ -75,16 +75,20 @@
           </div>
         </div>
         <div class="col d-flex justify-content-end"><a  class="btn btn-secondary " href="javascript:void(0)" onclick="redirectToNext('<%=data[0].totalEpisodes%>')">Next</a></div>
-
-
       </div>
-
     </section>
+    <!--EPISODE NUM-->
+      <div class="current-episode d-flex justify-content-center">
+        <p class="text-white">You are watching:Episode <%=episode%></p>
+      </div>
     <!--IFRAME-->
         <div class="resp-container">
           <iframe class="resp-iframe" src="https://<%= data[0].servers[0].iframe%>" allowfullscreen></iframe>
         </div>
-    
+    <!--Alert-->
+    <div class="alert alert-success my-2" role="alert">
+      Make sure to use an adblocker as i'm not the one hosting these videos.
+    </div>
     <!--FOOTER-->
     <footer class="bg-dark  ">   
       <div class="row">

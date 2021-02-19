@@ -13,10 +13,12 @@ var editedLink = titlee.slice(0,n)
    }else{
       var name = editedLink.replace(/[-]/g,' ').replace('episode','').toUpperCase();
    }
-  // console.log(editedLink)
+
+   var currentEpi = titlee.slice(n) //for sending current episode
+   //console.log(currentEpi)
   // console.log(name)
    api.animeEpisodeHandler(titlee).then(function(result){
-       res.render('episodepage', {data:result, links:editedLink , title:name})
+       res.render('episodepage', {data:result, links:editedLink , title:name , episode: currentEpi})
    })
 
 })

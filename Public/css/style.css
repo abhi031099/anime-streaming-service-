@@ -3,7 +3,7 @@ body{
     font-family: "Potta One", cursive;
 }
 /* Container colors */
-.mainpagecontainer , .animelist-body, .errorpage, .anime-page , .episode-page{
+.mainpagecontainer , .animelist-body, .errorpage, .anime-page , .episode-page , .help-page{
     background-color: #212529;
 }
 /* Navbar custom*/
@@ -142,6 +142,8 @@ li#anime-listgroup a:hover{
     height: 100%;
     border: 0;
 }
+/*HELP PAGE*/
+
 @media screen and (max-width:700px){
     .card-img-top{
         height:auto;
