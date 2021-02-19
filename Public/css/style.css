@@ -3,7 +3,7 @@ body{
     font-family: "Potta One", cursive;
 }
 /* Container colors */
-.mainpagecontainer , .animelist-body, .errorpage{
+.mainpagecontainer , .animelist-body, .errorpage, .anime-page , .episode-page{
     background-color: #212529;
 }
 /* Navbar custom*/
@@ -102,15 +102,49 @@ li#anime-listgroup a:hover{
     color: #00ff00;
 }
 /*ERROR PAGE CONTENT*/
-a{
+.error-image a{
     color: #00ff00;
     text-decoration: none;
 }
-a:hover {
+.error-image a:hover {
     color:#009900;
     text-decoration: none;
 
 }
+/*EPISODE PAGE */
+.anime-info h4{
+    background-color: #00ff00;
+}
+.anime-info p{
+    font-size: small;
+}
+.anime-info h5{
+    font-size: small;
+}
+.anime-info{
+    border: 1px solid white;
+}
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 100%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
 @media screen and (max-width:700px){
     .card-img-top{
         height:auto;

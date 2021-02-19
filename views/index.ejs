@@ -10,7 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+
   <link type="text/css" rel="stylesheet" href="/css/style.css">
   <title>WatchAnimeNow</title>
 </head>
@@ -42,7 +42,7 @@
       <img src="/images/coverimage.jpg">
     </section>
     <!--ALERT-->
-    <div class="alert alert-success my-1 py-1" role="alert">
+    <div class="alert alert-success my-1 py-1 text-center" role="alert">
       Welcome to my WebApp, i hope you like it! If you find any bugs or something, head to the "Help" page. 
     </div>
     <!--SEARCH BAR-->
@@ -64,7 +64,7 @@
         <div class="card " style="width: 12rem;">
           <img class="card-img-top" src="<%= anime.img %>" alt="Card image cap">
           <div class="card-body text-center">
-            <a href="/animepage/<%=anime.title %>" class="stretched-link"><%=anime.title %></a>
+            <a href="/episodepage/<%=anime.episodes[0].id %>" class="stretched-link"><%=anime.title %></a>
           </div>
         </div>
       <% }); %>

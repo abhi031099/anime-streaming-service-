@@ -13,53 +13,73 @@
   </head>
   <body>
     <!--NAVBAR-->
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg  bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="/images/logo.jpg" alt="logoo" width="30" height="24" class="d-inline-block align-top">
-          INITIAL D
-        </a>
-      </div>
-    </nav>
-    <p>https://<%= data[0].servers[0].iframe%></p>
-    <iframe 
-  src="https://<%= data[0].servers[0].iframe%>"
-   width="100%"  
-   height="100%" 
-   frameborder="0" 
-   allowfullscreen
->
-</iframe>
-    <% for (var i =1; i <=10;  i++ ) { %>
-    <p><%= i %> </p>
-    <% } %>
-    <div class="container">
-      <div class="row d-flex justify-content-center">
-        <% data.forEach(function(animeobj){ %>
-        <div class="card my-2 mx-2 border-0" style="width: 18rem;">
-          <img class="card-img" src="<%= animeobj.img %>" alt="Card image cap">
-          <div class="card-img-overlay">
-            <p><%= animeobj %></p>
-            <a class="btn btn-primary"  ><%=animeobj.title %> episode <%=animeobj.totalEpisodes %></a> 
+          <a class="navbar-brand " href="/">Sugoi Anime</a>
+          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon "></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="/animelist/0">Anime List</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Help</a>
+                  </li>
+              </ul>
           </div>
-          
-        </div>
-        <% }); %>
       </div>
+  </nav>
+    <div class="container episode-page">
+    <!--INFO SECTION-->
+    <section class="anime-info">
+      <h4 class=" ">Anime Info</h4>
+          <div class="card my-1">
+            <div class="row ">
+              <div class="col-md-4">
+                  <img src="<%= data[0].img %>" class="w-100 px-3">
+                </div>
+                <div class="col-md-8 px-1">
+                  <div class="card-block px-3">
+                    <h5 class="card-title text-white py-1"><%=title%></h5>
+                    <p class="card-text text-white">Type:<%=data[0].category%></p>
+                    <p class="card-text text-white"> <%=data[0].synopsis%></p>
+                    <p class="card-text text-white"> Genres:<%=data[0].genres%></p>
+                    <p class="card-text text-white"> Released:<%=data[0].released%></p>
+                    <p class="card-text text-white">Status:<%=data[0].status%></p>
+                    <p class="card-text text-white">Other Name(s):<%=data[0].otherName%></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </section>
+    <!--EPISODE LIST-->
+    <section class="episode-list my-2 d-flex justify-content-center">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Select Episode
+        </button>
+        <ul class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuButton1">
+          <% const j = data[0].totalEpisodes%>
+          <% for (var i =1; i <=j;  i++ ) { %>
+          <li><a class="dropdown-item" href="/episodepage/<%= links%><%=i%>">Ep <%=i %></a></li>
+          <% } %>
+        </ul>
+      </div>
+    </section>
+    <!--IFRAME-->
+    <section class="container">
+      <div class="row">
+        <div class="col-sm-8 iframe-container">
+          <iframe class="responsive-iframe" src="https://<%= data[0].servers[0].iframe%>" allowfullscreen></iframe>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+    </section>
 
-    <% const j = data[0].totalEpisodes%>
-  <% for (var i =1; i <=j;  i++ ) { %>
-    <a class="btn btn-primary" href="/episodepage/<%= links%><%=i%>" >Ep <%=i %></a>
-    <% } %>
 
-
-      <p>synopsis</p>
-      <p>genres</p>
-      <p>released</p>
-      <p>status</p>
-      <p>othername</p>
-      <p>total episodes</p>
-      <p>episode list</p>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->

@@ -20,3 +20,6 @@ function searchPage(){
     
 }
 
+function redirectPage(){
+    
+}
